@@ -1,0 +1,9 @@
+{
+    "domain": "unifi_bandwidth",
+    "name": "UniFi Bandwidth",
+    "version": "1.0.0",
+    "documentation": "https://github.com/dein-github/unifi-bandwidth",
+    "requirements": ["requests"],
+    "dependencies": [],
+    "codeowners": ["@dein-github"]
+  }  
