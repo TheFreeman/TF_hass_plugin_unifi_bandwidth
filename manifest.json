@@ -1,9 +1,12 @@
 {
-    "domain": "unifi_bandwidth",
-    "name": "UniFi Bandwidth",
-    "version": "1.0.0",
-    "documentation": "https://github.com/dein-github/unifi-bandwidth",
-    "requirements": ["requests"],
-    "dependencies": [],
-    "codeowners": ["@dein-github"]
-  }  
+  "domain": "unifi_bandwidth",
+  "name": "UniFi Bandwidth",
+  "version": "1.0.0",
+  "documentation": "https://github.com/TheFreeman/TF_hass_plugin_unifi_bandwidth",
+  "requirements": ["requests"],
+  "dependencies": [],
+  "codeowners": ["@TheFreeman"],
+  "iot_class": "local_polling",
+  "config_flow": true,
+  "logo": "branding/logo.png"
+}
