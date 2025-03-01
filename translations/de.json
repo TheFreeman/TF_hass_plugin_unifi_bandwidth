@@ -1,0 +1,19 @@
+{
+  "config": {
+    "step": {
+      "user": {
+        "title": "UniFi Bandwidth Konfiguration",
+        "description": "Gib die Verbindungsdetails für deine UniFi Network Console ein.",
+        "data": {
+          "host": "Unifi Network Console IP (UDM, UCK, etc.)",
+          "api_key": "Generierter API-Schlüssel",
+          "verify_ssl": "SSL Verifizierung an/aus",
+          "update_interval": "Abfrage-Intervall in Sekunden"
+        }
+      }
+    },
+    "error": {
+      "connection_error": "Verbindung zur UniFi API fehlgeschlagen."
+    }
+  }
+}

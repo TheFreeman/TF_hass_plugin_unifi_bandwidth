@@ -1,0 +1,5 @@
+{
+    "domain": "unifi_bandwidth",
+    "name": "UniFi Bandwidth",
+    "codeowners": ["@TheFreeman"]
+  }  

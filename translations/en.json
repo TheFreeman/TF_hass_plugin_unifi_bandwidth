@@ -1,0 +1,19 @@
+{
+  "config": {
+    "step": {
+      "user": {
+        "title": "UniFi Bandwidth Configuration",
+        "description": "Enter the connection details for your UniFi Network Console.",
+        "data": {
+          "host": "Unifi Network Console IP (UDM, UCK, etc.)",
+          "api_key": "Generated API Key",
+          "verify_ssl": "Enable/Disable SSL Verification",
+          "update_interval": "Polling interval in seconds"
+        }
+      }
+    },
+    "error": {
+      "connection_error": "Failed to connect to UniFi API."
+    }
+  }
+}
