@@ -3,7 +3,7 @@
   "name": "UniFi Bandwidth",
   "version": "1.0.0",
   "documentation": "https://github.com/TheFreeman/TF_hass_plugin_unifi_bandwidth",
-  "requirements": ["aiohttp", "async_timeout"],
+  "requirements": [],
   "dependencies": [],
   "codeowners": ["@TheFreeman"],
   "iot_class": "local_polling",

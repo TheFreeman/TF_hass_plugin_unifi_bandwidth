@@ -8,7 +8,7 @@ from homeassistant.helpers.update_coordinator import (
     UpdateFailed,
 )
 import aiohttp
-import async_timeout
+import asyncio
 from datetime import timedelta
 
 from .const import DOMAIN, CONF_HOST, CONF_API_KEY, CONF_VERIFY_SSL, CONF_UPDATE_INTERVAL, DEFAULT_UPDATE_INTERVAL
@@ -55,10 +55,15 @@ class UniFiDataUpdateCoordinator(DataUpdateCoordinator):
 
         try:
             async with aiohttp.ClientSession() as session:
-                async with async_timeout.timeout(10):
-                    async with session.get(url, headers=headers, ssl=self.verify_ssl) as response:
-                        data = await response.json()
-                        return {client["mac"]: client for client in data["data"]}
+                response = await asyncio.wait_for(
+                    session.get(url, headers=headers, ssl=self.verify_ssl), timeout=10
+                )
+                data = await response.json()
+                _LOGGER.debug(f"API Daten empfangen: {data}")
+                return {client["mac"]: client for client in data["data"]}
+        except asyncio.TimeoutError:
+            _LOGGER.error("Timeout error while fetching data from UniFi API")
+            raise UpdateFailed("Timeout while fetching data")
         except Exception as err:
             _LOGGER.error(f"Error fetching data from UniFi API: {err}")
             raise UpdateFailed from err
@@ -72,16 +77,27 @@ class UniFiBandwidthSensor(CoordinatorEntity, SensorEntity):
         self._mac = mac
         self._device_name = device_name
         self._data_type = data_type
-        self._attr_name = f"UniFi {device_name} {data_type}"  # Anzeige-Name
-        self._attr_unique_id = f"{mac}_{data_type}"  # Eindeutige ID
-        self._attr_entity_id = f"sensor.unifi_{data_type}_{mac.replace(':', '_')}"  # Sensor-ID mit neuem Format
-
+        self._attr_name = f"UniFi {device_name} {data_type}"
+        self._attr_unique_id = f"{mac}_{data_type}"
+        self._attr_entity_id = f"sensor.unifi_{data_type}_{mac.replace(':', '_')}"
+    
     @property
     def state(self):
         """Return the state of the sensor."""
         client_data = self.coordinator.data.get(self._mac, {})
+        _LOGGER.debug(f"Sensor {self._attr_name}: {client_data}")  # Debugging
+
         if self._data_type == "download":
             return client_data.get("rx_bytes-r", 0)
         elif self._data_type == "upload":
             return client_data.get("tx_bytes-r", 0)
         return None
+    
+    @property
+    def available(self):
+        """Return True if sensor is available."""
+        return self.coordinator.last_update_success
+    
+    async def async_update(self):
+        """Request an update from the coordinator."""
+        await self.coordinator.async_request_refresh()
