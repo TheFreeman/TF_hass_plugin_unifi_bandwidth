@@ -1,5 +1,15 @@
 {
-    "domain": "unifi_bandwidth",
-    "name": "UniFi Bandwidth",
-    "codeowners": ["@TheFreeman"]
-  }  
+  "name": "UniFi Bandwidth",
+  "url": "https://github.com/TheFreeman/TF_hass_plugin_unifi_bandwidth",
+  "maintainer": "@TheFreeman",
+  "country": "global",
+  "homeassistant": "2024.2.0",
+  "domains": ["sensor"],
+  "integrations": [
+    {
+      "domain": "unifi_bandwidth",
+      "name": "UniFi Bandwidth",
+      "config_flow": true
+    }
+  ]
+}
