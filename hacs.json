@@ -1,7 +1,6 @@
 {
   "domain": "unifi_bandwidth",
   "name": "UniFi Bandwidth",
-  "documentation": "https://github.com/TheFreeman/TF_hass_plugin_unifi_bandwidth",
   "homeassistant": "2024.2.0",
   "integration_type": "integration",
   "issue_tracker": "https://github.com/TheFreeman/TF_hass_plugin_unifi_bandwidth/issues",
