@@ -1,0 +1,8 @@
+blank_issues_enabled: false
+contact_links:
+  - name: 📖 Documentation (EN)
+    url: https://github.com/TheFreeman/TF_hass_plugin_unifi_bandwidth/wiki
+    about: Please check the documentation before opening an issue.
+  - name: 📖 Dokumentation (DE)
+    url: https://github.com/TheFreeman/TF_hass_plugin_unifi_bandwidth/wiki
+    about: Bitte überprüfe die Dokumentation, bevor du ein Issue erstellst.

@@ -1,0 +1,31 @@
+
+---
+
+## **🚀 Schritt 3: Feature Request Template (`feature_request.md`)**
+📍 **Pfad:** `.github/ISSUE_TEMPLATE/feature_request.md`
+
+```md
+---
+name: ✨ Feature Request / Funktionswunsch
+about: Suggest a new feature for the UniFi Bandwidth integration / Schlage eine neue Funktion vor
+title: "[Feature]: <Your Idea>"
+labels: ["enhancement"]
+assignees: ["TheFreeman"]
+---
+
+## 🚀 Feature Description / Funktionsbeschreibung
+**EN:** A short and precise description of the requested feature.  
+**DE:** Eine kurze und präzise Beschreibung der gewünschten Funktion.
+
+## 🔍 Why is this needed? / Warum ist das wichtig?
+**EN:** Why should this feature be added? What problem does it solve?  
+**DE:** Warum sollte diese Funktion hinzugefügt werden? Welches Problem löst sie?
+
+## 🎯 Possible Implementation / Mögliche Umsetzung
+**EN:** If you have an idea on how to implement this feature, share it here!  
+**DE:** Falls du eine Idee zur Implementierung hast, teile sie hier!
+
+## 🖥️ Relevant Versions / Relevante Versionen
+- **UniFi Bandwidth Version:** `X.X.X`
+- **Home Assistant Version:** `X.X.X`
+- **UniFi Controller Version:** `X.X.X`
