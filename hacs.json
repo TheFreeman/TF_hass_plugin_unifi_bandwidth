@@ -1,16 +1,11 @@
 {
-    "name": "UniFi Bandwidth",
-    "domain": "unifi_bandwidth",
-    "country": "Global",
-    "homeassistant": "2024.2.0",
-    "integration_type": "integration",
-    "render_readme": true,
-    "filename": "README.md",
-    "zip_release": false,
-    "source": "https://github.com/TheFreeman/TF_hass_plugin_unifi_bandwidth",
-    "documentation": "https://github.com/TheFreeman/TF_hass_plugin_unifi_bandwidth",
-    "repository": "https://github.com/TheFreeman/TF_hass_plugin_unifi_bandwidth",
-    "icon": "images/icon.png",
-    "codeowners": ["@TheFreeman"]
-  }
-  
+  "name": "UniFi Bandwidth",
+  "domain": "unifi_bandwidth",
+  "codeowners": ["@TheFreeman"],
+  "documentation": "https://github.com/TheFreeman/TF_hass_plugin_unifi_bandwidth",
+  "homeassistant": "2024.2.0",
+  "integration_type": "integration",
+  "issue_tracker": "https://github.com/TheFreeman/TF_hass_plugin_unifi_bandwidth/issues",
+  "repository": "https://github.com/TheFreeman/TF_hass_plugin_unifi_bandwidth",
+  "requirements": []
+}
