@@ -1,5 +1,4 @@
 {
-  "domain": "unifi_bandwidth",
   "name": "UniFi Bandwidth",
   "homeassistant": "2024.2.0",
   "integration_type": "integration",
