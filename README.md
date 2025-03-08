@@ -30,6 +30,8 @@ Once available in HACS:
 4. Restart Home Assistant.
 5. Add the integration via **Settings → Devices & Services**.
 
+[![Open your Home Assistant instance and open a repository inside the Home Assistant Community Store.](https://my.home-assistant.io/badges/hacs_repository.svg)](https://my.home-assistant.io/redirect/hacs_repository/?owner=TheFreeman&repository=https%3A%2F%2Fgithub.com%2FTheFreeman%2FTF_hass_plugin_unifi_bandwidth)
+
 ---
 
 ## 🔑 **How to Get Your UniFi API Credentials**
